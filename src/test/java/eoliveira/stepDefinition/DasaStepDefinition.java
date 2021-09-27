@@ -66,7 +66,8 @@ public class DasaStepDefinition {
 	}	
 	
 	@Then("Eu verifico que estou na pagina delboniauremo via url")
-	public void verifyLink(String url) throws InterruptedException {
+	public void verifyLink() throws InterruptedException {
+		String url = "https://delboniauriemo.com.br/"
 		List<String> companyTab = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(companyTab.get(1));
 		assert (url.equals(driver.getCurrentUrl()));
