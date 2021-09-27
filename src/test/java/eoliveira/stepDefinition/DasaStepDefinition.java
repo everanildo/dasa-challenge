@@ -37,22 +37,10 @@ public class DasaStepDefinition {
 		this.driverManager.quitDriver();
 	}
 
-//	@Given("I Navigate To {string}")
-//	public void navigateToDasaPage(String url) {
-//		this.driver.get(url);
-//	}
-
 	@Given("Eu navego até dasa home page")
 	public void navigateToDasaPage() {
 		this.driver.get("http://www.dasa.com.br");
 	}
-
-//	@Given("I Navigate To Companies Page")
-//	public void navigateToCompaniesPage() {
-//		home.mouseOverMenuSomosDasa();
-//		home.clickOnNossasMarcasOption();
-//	}
-	
 	
 	@Given("Em Dasa Home page eu navego até companies")
 	public void navigateToCompaniesPage() {
@@ -60,22 +48,10 @@ public class DasaStepDefinition {
 		home.clickNossasMarcasOption();
 	}
 
-//	@When("I Select {string} As Region")
-//	public void selectRegion(String option) throws Exception {
-//		nossasMarcas.selectOption(option);
-//	}	
-	
 	@Given("Eu seleciono região São Paulo")
 	public void selectRegion() throws Exception {
 		nossasMarcas.selectOption("São Paulo");
-	}
-
-//	@Then("I Print Filtered Companies URLs on console")
-//	public void printCompaniesURL() {
-//		for (WebElement brand : nossasMarcas.GetBrands()) {
-//			System.out.println(brand.getAttribute("href"));
-//		}
-//	}	
+	}	
 	
 	@Given("Eu listo os laboratórios de São Paulo no Console")
 	public void printCompaniesURL() {
@@ -83,24 +59,11 @@ public class DasaStepDefinition {
 			System.out.println(brand.getAttribute("href"));
 		}
 	}
-
-//	@When("I Select {string} Company")
-//	public void selectCompany(String url) throws InterruptedException {
-//		nossasMarcas.selectCompany(url);
-//	}	
 	
 	@Given("Eu seleciono delboniauremo via url")
 	public void selectCompany() throws InterruptedException {
 		nossasMarcas.selectCompany("delboniauriemo.com.br");
-	}
-
-//	@Then("I verify if I navigated to {string}")
-//	public void verifyLink(String url) throws InterruptedException {
-//		List<String> companyTab = new ArrayList<String>(driver.getWindowHandles());
-//		driver.switchTo().window(companyTab.get(1));
-//		assert (url.equals(driver.getCurrentUrl()));
-//	}
-	
+	}	
 	
 	@Then("Eu verifico que estou na pagina delboniauremo via url")
 	public void verifyLink(String url) throws InterruptedException {
